@@ -51,16 +51,6 @@
                             }
                         },
 
-                        // For the life of me, I can't get the numbers to format
-                        //lang: {
-                        //    thousandsSep: ','
-                        //},
-                        //
-                        //tooltip: {
-                        //    pointFormat: '&nbsp;&nbsp;&nbsp;<b>{point.value:,.0f}</b>',
-                        //    shared: true
-                        //},
-
                         colorAxis: {
                             min: 0,
                             max: 75000
@@ -89,6 +79,11 @@
                             enableMouseTracking: false
                         }]
                     };
+
+                    Highcharts.setOptions({
+                        lang: {
+                            thousandsSep: ','    }
+                        });
 
                     scope.chart = new Highcharts.Map(chartOptions);
                 });
